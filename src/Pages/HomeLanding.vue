@@ -5,6 +5,7 @@ import LinkPrimary from '../components/LinkPrimary.vue';
 import LinkSecondary from '../components/LinkSecondary.vue';
 import StackedImages from '../components/StackedImages.vue';
 import InfoCard from '../components/InfoCard.vue';
+import ProcessCard from '../components/ProcessCard.vue';
 </script>
 
 <template>
@@ -58,11 +59,26 @@ import InfoCard from '../components/InfoCard.vue';
         </h2>
         <p class="text-brand-white text-sm mt-4">Schedule always booked? Too busy to take in clients? That is a <b class="font-nunito font-extrabold">lame</b> excuse.</p>
         <p class="text-brand-white text-sm mt-2">There is <b class="font-nunito font-extrabold">no such thing</b> as being booked out! Let your fans bid on your availability!</p>
-        <img
-            src="../assets/svg/calendar.svg"
-            alt="Schedule"
-            class="w-14 h-14 mt-10"
-        />
+        <div class="flex flex-col items-center">
+          <img
+              src="../assets/svg/calendar.svg"
+              alt="Schedule"
+              class="w-14 h-14 mt-10"
+          />
+          <ProcessCard :card="1" />
+          <img
+              src="../assets/svg/calendar.svg"
+              alt="Schedule"
+              class="w-14 h-14 mt-10"
+          />
+          <ProcessCard :card="2" />
+          <img
+              src="../assets/svg/calendar.svg"
+              alt="Schedule"
+              class="w-14 h-14 mt-10"
+          />
+          <ProcessCard :card="3" />
+        </div>
       </div>
     </section>
   </div>
