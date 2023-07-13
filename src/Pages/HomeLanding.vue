@@ -6,6 +6,7 @@ import LinkSecondary from '../components/LinkSecondary.vue';
 import StackedImages from '../components/StackedImages.vue';
 import InfoCard from '../components/InfoCard.vue';
 import ProcessCard from '../components/ProcessCard.vue';
+import ProcessLine from '../components/ProcessLine.vue';
 </script>
 
 <template>
@@ -57,8 +58,10 @@ import ProcessCard from '../components/ProcessCard.vue';
         <h2 class="text-gradient text-[40px] line-height font-nunito font-extrabold">
           Embrace the new wave of creator engagement
         </h2>
-        <p class="text-brand-white text-sm mt-4">Schedule always booked? Too busy to take in clients? That is a <b class="font-nunito font-extrabold">lame</b> excuse.</p>
-        <p class="text-brand-white text-sm mt-2">There is <b class="font-nunito font-extrabold">no such thing</b> as being booked out! Let your fans bid on your availability!</p>
+        <div>
+          <p class="text-brand-white text-sm mt-4">Schedule always booked? Too busy to take in clients? That is a <b class="font-nunito font-extrabold">lame</b> excuse.</p>
+          <p class="text-brand-white text-sm mt-2">There is <b class="font-nunito font-extrabold">no such thing</b> as being booked out! Let your fans bid on your availability!</p>
+        </div>
         <div class="flex flex-col items-center">
           <img
               src="../assets/svg/calendar.svg"
@@ -66,18 +69,69 @@ import ProcessCard from '../components/ProcessCard.vue';
               class="w-14 h-14 mt-10"
           />
           <ProcessCard :card="1" />
+          <div class="mt-4">
+            <ProcessLine />
+          </div>
           <img
-              src="../assets/svg/calendar.svg"
+              src="../assets/svg/hammer.svg"
               alt="Schedule"
-              class="w-14 h-14 mt-10"
+              class="w-14 h-14 mt-4"
           />
           <ProcessCard :card="2" />
+          <div class="mt-4">
+            <ProcessLine />
+          </div>
           <img
-              src="../assets/svg/calendar.svg"
+              src="../assets/svg/hands.svg"
               alt="Schedule"
-              class="w-14 h-14 mt-10"
+              class="w-14 h-14 mt-4"
           />
           <ProcessCard :card="3" />
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <section id="newsletter" class="w-full flex justify-center pt-10">
+      <div class="w-10/12 flex flex-col items-center">
+        <h2 class="text-gradient text-[40px] line-height font-nunito font-extrabold">
+          Stay ahead and be the first to get early access
+        </h2>
+        <div>
+          <p class="text-brand-white text-sm mt-4">Sign up for our newsletter and be the <b class="font-nunito font-extrabold">first</b> to get early access.</p>
+          <p class="text-brand-white text-sm mt-2">Stay in the loop and get <b class="font-nunito font-extrabold">exclusive</b> deals.</p>
+          <p class="text-brand-white text-sm mt-2">Be the <b class="font-nunito font-extrabold">first</b> to get updates about the product.</p>
+        </div>
+        <div class="w-full bg-brand-white rounded-lg flex mt-10 justify-between">
+          <input
+              placeholder="Your best email"
+              class="rounded-lg font-inter w-7/12 pl-1 text-brand-black placeholder:text-brand-neutral focus:ring-none focus:outline-none"
+          />
+          <button
+              class="
+                top-0
+                right-0
+                rounded-r-lg
+                rounded-l-xl
+                bg-gradient-to-r
+                from-brand-primary
+                to-brand-secondary
+                text-brand-white
+                font-nunito
+                font-extrabold
+                px-6 py-2
+              "
+          >
+            Sign Up
+          </button>
+        </div>
+        <div class="mt-1 text-sm">
+          <p class="font-inter text-brand-white">
+            Join the
+            <span class="text-gradient font-nunito font-extrabold">
+              top creators</span>.
+            Yes, it's completely
+            <b class="font-extrabold font-nunito">free</b>.
+          </p>
         </div>
       </div>
     </section>

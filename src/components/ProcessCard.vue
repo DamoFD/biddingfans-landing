@@ -23,7 +23,7 @@ switch (props.card) {
     btn.value = 'Creator Account';
     break;
   case 2:
-    title.value = 'Bidt';
+    title.value = 'Bid';
     description.value = 'Bid for time with your idol';
     points.value = [
       'Fans bid on desired time',
