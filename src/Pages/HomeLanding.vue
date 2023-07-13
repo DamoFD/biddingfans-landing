@@ -7,6 +7,7 @@ import StackedImages from '../components/StackedImages.vue';
 import InfoCard from '../components/InfoCard.vue';
 import ProcessCard from '../components/ProcessCard.vue';
 import ProcessLine from '../components/ProcessLine.vue';
+import FaqDropdown from '../components/FaqDropdown.vue';
 </script>
 
 <template>
@@ -91,8 +92,8 @@ import ProcessLine from '../components/ProcessLine.vue';
       </div>
     </section>
     <!-- Newsletter -->
-    <section id="newsletter" class="w-full flex justify-center pt-10">
-      <div class="w-10/12 flex flex-col items-center">
+    <section id="newsletter" class="w-full flex justify-center pt-10 relative overflow-x-hidden">
+      <div class="w-10/12 flex flex-col items-center z-[2]">
         <h2 class="text-gradient text-[40px] line-height font-nunito font-extrabold">
           Stay ahead and be the first to get early access
         </h2>
@@ -133,6 +134,10 @@ import ProcessLine from '../components/ProcessLine.vue';
             <b class="font-extrabold font-nunito">free</b>.
           </p>
         </div>
+        <FaqDropdown />
+      </div>
+      <div class="absolute top-1/2 -translate-y-1/3 -right-1/2">
+        <CircleGlow />
       </div>
     </section>
   </div>
