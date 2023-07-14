@@ -148,7 +148,7 @@ import FaqDropdown from '../components/FaqDropdown.vue';
 
     <!-- FAQ Section -->
     <section id="faq" class="w-full flex justify-center py-10">
-      <div class="w-11/12">
+      <div class="w-10/12">
         <FaqDropdown />
       </div>
     </section>
@@ -156,8 +156,8 @@ import FaqDropdown from '../components/FaqDropdown.vue';
     <!-- Socials Section -->
     <section id="socials" class="w-full flex justify-center pt-10">
       <div class="w-5/6">
-        <h3 class="text-brand-white font-nunito font-extrabold text-2xl">Check out our socials!</h3>
-        <div class="grid grid-cols-3 mt-4 gap-6">
+        <h3 class="text-brand-white font-nunito font-extrabold text-2xl md:text-3xl">Check out our socials!</h3>
+        <div class="grid grid-cols-3 mt-4 gap-6 md:grid-cols-6">
           <a href="#" class="w-full h-full flex justify-center items-center">
             <img src="../assets/svg/discord.svg" alt="discord" />
           </a>
@@ -182,11 +182,15 @@ import FaqDropdown from '../components/FaqDropdown.vue';
     <!-- Footer -->
     <footer class="w-full flex justify-center">
       <div class="flex flex-col mt-16 text-brand-neutral-secondary w-5/6">
+        <div class="flex flex-col md:flex-row md:justify-between">
         <a class="underline">biddingfans@gmail.com</a>
         <a class="underline">Terms and Conditions</a>
         <a class="underline">Privacy Policy</a>
+        </div>
+        <div class="flex flex-col md:flex-row md:justify-between md:mt-4">
         <p>© BiddingFans LLC</p>
         <p>Created by <a class="underline">Damion Voshall</a></p>
+        </div>
       </div>
     </footer>
   </div>
