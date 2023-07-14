@@ -134,10 +134,15 @@ import FaqDropdown from '../components/FaqDropdown.vue';
             <b class="font-extrabold font-nunito">free</b>.
           </p>
         </div>
-        <FaqDropdown />
       </div>
       <div class="absolute top-1/2 -translate-y-1/3 -right-1/2">
         <CircleGlow />
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="w-full flex justify-center pt-10">
+      <div class="w-11/12">
+        <FaqDropdown />
       </div>
     </section>
   </div>
