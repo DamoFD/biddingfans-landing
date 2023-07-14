@@ -140,7 +140,7 @@ import FaqDropdown from '../components/FaqDropdown.vue';
       </div>
     </section>
     <!-- FAQ Section -->
-    <section id="faq" class="w-full flex justify-center pt-10">
+    <section id="faq" class="w-full flex justify-center py-10">
       <div class="w-11/12">
         <FaqDropdown />
       </div>

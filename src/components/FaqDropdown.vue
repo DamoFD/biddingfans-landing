@@ -1,58 +1,49 @@
+<template>
+  <div class="w-full max-w-md mx-auto">
+    <div
+        class="border border-gray-300 rounded-lg shadow-sm"
+        v-for="(item, i) in items"
+        :key="i"
+    >
+      <button
+          @click="toggle(i)"
+          class="w-full text-left px-4 py-2 text-gray-700 bg-white hover:bg-gray-100 flex justify-between items-center"
+      >
+        {{ item.title }}
+        <span class="arrow" :class="{ 'rotate-180': open === i}" />
+      </button>
+
+      <div
+          class="border-t border-gray-300 bg-gray-50 overflow-hidden transition-all ease-in-out duration-500"
+          :class="open === i ? 'max-h-20' : 'max-h-0'"
+      >
+        <div class="px-4 py-2">
+          {{ item.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script setup>
 import { ref } from 'vue';
 
-const links = ref([
-  {
-    name: 'First Menu',
-    active: false,
-    showMenu: false,
-    items: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
-  },
-  {
-    name: 'Second Menu',
-    active: false,
-    showMenu: false,
-    items: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
-  },
-  // Add more links as needed...
+const items = ref([
+  { title: 'Title 1', content: 'Content 1' },
+  { title: 'Title 2', content: 'Content 2' },
+  { title: 'Title 3', content: 'Content 3' },
 ]);
 
-const toggleActive = (index) => {
-  links.value.forEach((link, i) => {
-    if (i === index) {
-      link.active = !link.active;
-      link.showMenu = !link.showMenu;
-    } else {
-      link.active = false;
-      link.showMenu = false;
-    }
-  });
+const open = ref(null);
+
+const toggle = (i) => {
+  if (open.value === i) {
+    open.value = null;
+  } else {
+    open.value = i;
+  }
 };
 </script>
-
-<template>
-<div class="w-full my-10">
-    <div
-        v-for="(link, index) in links"
-        :key="index"
-        class="w-full"
-    >
-      <div class="flex items-center justify-between bg-gradient-to-t from-brand-black to-brand-neutral">
-      <h3 class="text-brand-white font-nunito font-extrabold" @click="toggleActive(index)">
-        {{ link.name }}
-      </h3>
-      <span class="arrow" :class="{ 'rotate-180': link.showMenu}"></span>
-      </div>
-      <transition name="slide">
-        <ul v-show="link.showMenu" class="bg-white slide-down" :style="{height: link.showMenu ? `${link.items.length * 50}px` : '0'}">
-          <li v-for="(item, itemIndex) in link.items" :key="`item-${itemIndex}`">
-            <a class="text-brand-white" href="#">{{ item }}</a>
-          </li>
-        </ul>
-      </transition>
-    </div>
-</div>
-</template>
 
 <style scoped>
 .arrow {
@@ -61,17 +52,11 @@ const toggleActive = (index) => {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #FCFCFC;
-  transition: transform .5s ease-in-out;
+  border-top: 5px solid black;
+  transition: transform .3s ease-in-out;
 }
 
 .rotate-180 {
   transform: rotate(180deg);
 }
-
-.slide-down {
-  overflow: hidden;
-  transition: height .3s ease-in-out;
-}
-
 </style>
