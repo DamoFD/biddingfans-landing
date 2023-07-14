@@ -21,18 +21,18 @@ import FaqDropdown from '../components/FaqDropdown.vue';
       <!-- Hero Section -->
       <div class="h-2/3 w-full flex items-center justify-center">
         <div class="flex flex-col z-[2]">
-          <h2 class="text-brand-white text-[40px] font-nunito font-extrabold line-height">
+          <h2 class="text-brand-white text-[40px] font-nunito font-extrabold line-height md:text-[80px]">
             Stop limiting
             <br/>
             <span class="text-gradient">
               Your income
             </span>
           </h2>
-          <div class="text-brand-white font-inter mt-4 pl-1 text-sm">
-            <p>Your fans know your worth.</p>
-            <p>Experience exponential growth.</p>
+          <div class="text-brand-white font-inter mt-4 pl-1 text-sm md:text-lg md:pl-2">
+            <p>Your <b class="font-nunito font-extrabold">fans</b> know your worth.</p>
+            <p>Experience exponential <b class="font-nunito font-extrabold">growth</b>.</p>
           </div>
-          <div class="flex mt-6 justify-between">
+          <div class="flex mt-8 justify-between">
             <LinkSecondary>Early Access</LinkSecondary>
             <LinkPrimary>Learn More</LinkPrimary>
           </div>
@@ -198,5 +198,12 @@ import FaqDropdown from '../components/FaqDropdown.vue';
 
 .line-height {
   line-height: 2.75rem;
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+  .line-height {
+    line-height: 4.5rem;
+  }
 }
 </style>
