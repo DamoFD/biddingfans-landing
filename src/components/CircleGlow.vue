@@ -3,6 +3,15 @@
 
 <template>
   <div
-    class="w-[300px] h-[300px] blur-[100px] bg-brand-primary rounded-full"
+    class="
+    w-[300px]
+    h-[300px]
+    blur-[100px]
+    bg-brand-primary
+    rounded-full
+    md:w-[500px]
+    md:h-[500px]
+    md:bg-opacity-50
+    "
   />
 </template>
