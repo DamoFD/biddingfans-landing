@@ -29,9 +29,9 @@
 import { ref } from 'vue';
 
 const items = ref([
-  { title: 'What is BiddingFans?', content: 'Content 1' },
-  { title: 'When will become BiddingFans available?', content: 'Content 2' },
-  { title: 'How do I get early access to BiddingFans?', content: 'Content 3' },
+  { title: 'What is BiddingFans?', content: 'BiddingFans is an auction platform that allows fans bid on creator\'s time slots making it a win-win for both parties.' },
+  { title: 'When will become BiddingFans available?', content: 'BiddingFans is expected to release the beta on August 1st, 2023.' },
+  { title: 'How do I get early access to BiddingFans?', content: 'All users will have access to early release July 23, 2023. Users can sign up for the newsletter to be the first to get notified.' },
 ]);
 
 const open = ref(null);
