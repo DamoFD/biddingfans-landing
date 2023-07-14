@@ -92,7 +92,7 @@ import FaqDropdown from '../components/FaqDropdown.vue';
       </div>
     </section>
     <!-- Newsletter -->
-    <section id="newsletter" class="w-full flex justify-center pt-10 relative overflow-x-hidden">
+    <section id="newsletter" class="w-full flex justify-center py-10 relative overflow-x-hidden mt-10">
       <div class="w-10/12 flex flex-col items-center z-[2]">
         <h2 class="text-gradient text-[40px] line-height font-nunito font-extrabold">
           Stay ahead and be the first to get early access
@@ -144,6 +144,10 @@ import FaqDropdown from '../components/FaqDropdown.vue';
       <div class="w-11/12">
         <FaqDropdown />
       </div>
+    </section>
+    <!-- Socials Section -->
+    <section id="socials">
+
     </section>
   </div>
 </template>
