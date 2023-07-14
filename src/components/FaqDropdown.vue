@@ -30,8 +30,8 @@ import { ref } from 'vue';
 
 const items = ref([
   { title: 'What is BiddingFans?', content: 'Content 1' },
-  { title: 'When will it become available?', content: 'Content 2' },
-  { title: 'How do I get early access?', content: 'Content 3' },
+  { title: 'When will become BiddingFans available?', content: 'Content 2' },
+  { title: 'How do I get early access to BiddingFans?', content: 'Content 3' },
 ]);
 
 const open = ref(null);

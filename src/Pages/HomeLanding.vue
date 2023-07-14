@@ -45,6 +45,7 @@ import FaqDropdown from '../components/FaqDropdown.vue';
     <div class="w-full flex justify-center absolute top-2/3">
       <StackedImages />
     </div>
+
     <!-- Info Cards -->
     <section id="info" class="w-full flex justify-center pt-80">
       <div class="w-10/12 flex flex-col">
@@ -63,6 +64,7 @@ import FaqDropdown from '../components/FaqDropdown.vue';
           <p class="text-brand-white text-sm mt-4">Schedule always booked? Too busy to take in clients? That is a <b class="font-nunito font-extrabold">lame</b> excuse.</p>
           <p class="text-brand-white text-sm mt-2">There is <b class="font-nunito font-extrabold">no such thing</b> as being booked out! Let your fans bid on your availability!</p>
         </div>
+
         <div class="flex flex-col items-center">
           <img
               src="../assets/svg/calendar.svg"
@@ -91,6 +93,7 @@ import FaqDropdown from '../components/FaqDropdown.vue';
         </div>
       </div>
     </section>
+
     <!-- Newsletter -->
     <section id="newsletter" class="w-full flex justify-center py-10 relative overflow-x-hidden mt-10">
       <div class="w-10/12 flex flex-col items-center z-[2]">
@@ -139,16 +142,50 @@ import FaqDropdown from '../components/FaqDropdown.vue';
         <CircleGlow />
       </div>
     </section>
+
     <!-- FAQ Section -->
     <section id="faq" class="w-full flex justify-center py-10">
       <div class="w-11/12">
         <FaqDropdown />
       </div>
     </section>
-    <!-- Socials Section -->
-    <section id="socials">
 
+    <!-- Socials Section -->
+    <section id="socials" class="w-full flex justify-center pt-10">
+      <div class="w-5/6">
+        <h3 class="text-brand-white font-nunito font-extrabold text-2xl">Check out our socials!</h3>
+        <div class="grid grid-cols-3 mt-4 gap-6">
+          <a href="#" class="w-full h-full flex justify-center items-center">
+            <img src="../assets/svg/discord.svg" alt="discord" />
+          </a>
+          <a href="#" class="w-full h-full flex justify-center items-center">
+            <img src="../assets/svg/reddit.svg" alt="reddit" />
+          </a>
+          <a href="#" class="w-full h-full flex justify-center items-center">
+            <img src="../assets/svg/tiktok.svg" alt="tiktok" />
+          </a>
+          <a href="#" class="w-full h-full flex justify-center items-center">
+            <img src="../assets/svg/facebook.svg" alt="facebook" />
+          </a>
+          <a href="#" class="w-full h-full flex justify-center items-center">
+            <img src="../assets/svg/twitter.svg" alt="twitter" />
+          </a>
+          <a href="#" class="w-full h-full flex justify-center items-center">
+            <img src="../assets/svg/instagram.svg" alt="instagram" />
+          </a>
+        </div>
+      </div>
     </section>
+    <!-- Footer -->
+    <footer class="w-full flex justify-center">
+      <div class="flex flex-col mt-16 text-brand-neutral-secondary w-5/6">
+        <a class="underline">biddingfans@gmail.com</a>
+        <a class="underline">Terms and Conditions</a>
+        <a class="underline">Privacy Policy</a>
+        <p>© BiddingFans LLC</p>
+        <p>Created by <a class="underline">Damion Voshall</a></p>
+      </div>
+    </footer>
   </div>
 </template>
 
