@@ -13,6 +13,8 @@
         px-2
         py-1
         font-extrabold
+        md:text-2xl
+        md:px-6
         "
       href="#"
   >

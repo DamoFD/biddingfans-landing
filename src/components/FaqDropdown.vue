@@ -1,5 +1,25 @@
+<script setup>
+import { ref } from 'vue';
+
+const items = ref([
+  { title: 'What is BiddingFans?', content: 'BiddingFans is an auction platform that allows fans bid on creator\'s time slots making it a win-win for both parties.' },
+  { title: 'When will become BiddingFans available?', content: 'BiddingFans is expected to release the beta on August 1st, 2023.' },
+  { title: 'How do I get early access to BiddingFans?', content: 'All users will have access to early release July 23, 2023. Users can sign up for the newsletter to be the first to get notified.' },
+]);
+
+const open = ref(null);
+
+const toggle = (i) => {
+  if (open.value === i) {
+    open.value = null;
+  } else {
+    open.value = i;
+  }
+};
+</script>
+
 <template>
-  <div class="w-full max-w-md mx-auto">
+  <div class="w-full max-w-md mx-auto md:max-w-full">
     <div
         class="rounded-lg shadow-sm"
         v-for="(item, i) in items"
@@ -7,7 +27,24 @@
     >
       <button
           @click="toggle(i)"
-          class="w-full text-left px-4 py-2 text-brand-white font-nunito font-extrabold hover:bg-gray-100 flex justify-between items-center bg-gradient-to-t from-brand-black to-brand-neutral rounded-lg mt-4"
+          class="
+            w-full
+            text-left
+            px-4
+            py-2
+            text-brand-white
+            font-nunito
+            font-extrabold
+            hover:bg-gray-100
+            flex justify-between
+            items-center
+            bg-gradient-to-t
+            from-brand-black
+            to-brand-neutral
+            rounded-lg
+            mt-4
+            md:text-xl
+          "
       >
         {{ item.title }}
         <span class="arrow" :class="{ 'rotate-180': open === i}" />
@@ -24,26 +61,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue';
-
-const items = ref([
-  { title: 'What is BiddingFans?', content: 'Content 1' },
-  { title: 'When will become BiddingFans available?', content: 'Content 2' },
-  { title: 'How do I get early access to BiddingFans?', content: 'Content 3' },
-]);
-
-const open = ref(null);
-
-const toggle = (i) => {
-  if (open.value === i) {
-    open.value = null;
-  } else {
-    open.value = i;
-  }
-};
-</script>
 
 <style scoped>
 .arrow {

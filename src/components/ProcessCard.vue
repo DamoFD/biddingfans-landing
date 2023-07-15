@@ -47,9 +47,9 @@ switch (props.card) {
 </script>
 
 <template>
-  <div class="border-2 border-brand-neutral rounded-xl p-4 mt-4">
-    <h3 class="text-brand-white text-2xl font-nunito font-extrabold">{{title}}</h3>
-    <p class="text-brand-neutral-secondary font-inter">{{description}}</p>
+  <div class="border-2 border-brand-neutral rounded-xl p-4 mt-4 md:p-10">
+    <h3 class="text-brand-white text-2xl font-nunito font-extrabold md:text-3xl">{{title}}</h3>
+    <p class="text-brand-neutral-secondary font-inter md:text-lg">{{description}}</p>
     <hr class="text-brand-neutral-secondary mt-6" />
     <ul class="mt-6">
       <li
@@ -58,11 +58,11 @@ switch (props.card) {
           class="flex items-center mt-4"
       >
         <img src="../assets/svg/check.svg" alt="bullet point" />
-        <p class="text-brand-white font-inter ml-2">{{point}}</p>
+        <p class="text-brand-white font-inter ml-2 md:text-lg">{{point}}</p>
       </li>
     </ul>
-    <div class="w-full flex justify-center mt-6">
-      <button class="bg-brand-white text-brand-black px-8 py-2 rounded-full font-nunito font-extrabold">
+    <div class="w-full flex justify-center mt-6 md:mt-10">
+      <button class="bg-brand-white text-brand-black px-8 py-2 rounded-full font-nunito font-extrabold md:text-lg">
         {{btn}}
       </button>
     </div>

@@ -40,16 +40,20 @@ watchEffect(() => {
     flex
     justify-center
     items-center
-    m-4"
+    m-4
+    md:ml-10
+    md:h-20
+    md:w-20
+    "
     >
       <img
           :src="img"
           :alt="title"
-          class="w-10 h-10"
+          class="w-10 h-10 md:w-14 md:h-14"
       />
     </div>
-    <h3 class="text-brand-white font-nunito font-extrabold text-2xl ml-4">{{ title }}</h3>
-    <p class="text-brand-neutral-secondary text-sm font-inter m-4">{{ description }}</p>
+    <h3 class="text-brand-white font-nunito font-extrabold text-2xl ml-4 md:text-3xl md:ml-10">{{ title }}</h3>
+    <p class="text-brand-neutral-secondary text-sm font-inter m-4 md:text-lg md:ml-10">{{ description }}</p>
   </div>
 </template>
 
